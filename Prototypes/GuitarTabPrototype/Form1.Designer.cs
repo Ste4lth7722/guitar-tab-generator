@@ -34,14 +34,15 @@
             fileNameTextbox = new TextBox();
             label1 = new Label();
             stopRecordingButton = new Button();
+            recordingCountdownTimerLabel = new Label();
             SuspendLayout();
             // 
             // startPlaybackButton
             // 
-            startPlaybackButton.Location = new Point(552, 51);
-            startPlaybackButton.Margin = new Padding(4, 2, 4, 2);
+            startPlaybackButton.Location = new Point(340, 32);
+            startPlaybackButton.Margin = new Padding(2, 1, 2, 1);
             startPlaybackButton.Name = "startPlaybackButton";
-            startPlaybackButton.Size = new Size(193, 47);
+            startPlaybackButton.Size = new Size(119, 29);
             startPlaybackButton.TabIndex = 0;
             startPlaybackButton.Text = "Start Playback";
             startPlaybackButton.UseVisualStyleBackColor = true;
@@ -49,10 +50,10 @@
             // 
             // endPlaybackButton
             // 
-            endPlaybackButton.Location = new Point(552, 132);
-            endPlaybackButton.Margin = new Padding(4, 2, 4, 2);
+            endPlaybackButton.Location = new Point(340, 82);
+            endPlaybackButton.Margin = new Padding(2, 1, 2, 1);
             endPlaybackButton.Name = "endPlaybackButton";
-            endPlaybackButton.Size = new Size(193, 47);
+            endPlaybackButton.Size = new Size(119, 29);
             endPlaybackButton.TabIndex = 0;
             endPlaybackButton.Text = "End Playback";
             endPlaybackButton.UseVisualStyleBackColor = true;
@@ -60,10 +61,10 @@
             // 
             // beginRecordingButton
             // 
-            beginRecordingButton.Location = new Point(28, 51);
-            beginRecordingButton.Margin = new Padding(4, 2, 4, 2);
+            beginRecordingButton.Location = new Point(17, 32);
+            beginRecordingButton.Margin = new Padding(2, 1, 2, 1);
             beginRecordingButton.Name = "beginRecordingButton";
-            beginRecordingButton.Size = new Size(217, 70);
+            beginRecordingButton.Size = new Size(134, 44);
             beginRecordingButton.TabIndex = 1;
             beginRecordingButton.Text = "Begin Recording";
             beginRecordingButton.UseVisualStyleBackColor = true;
@@ -71,46 +72,58 @@
             // 
             // fileNameTextbox
             // 
-            fileNameTextbox.Location = new Point(28, 183);
-            fileNameTextbox.Margin = new Padding(4, 2, 4, 2);
+            fileNameTextbox.Location = new Point(17, 114);
+            fileNameTextbox.Margin = new Padding(2, 1, 2, 1);
             fileNameTextbox.Name = "fileNameTextbox";
-            fileNameTextbox.Size = new Size(201, 39);
+            fileNameTextbox.Size = new Size(125, 27);
             fileNameTextbox.TabIndex = 2;
+            fileNameTextbox.Text = "test";
             fileNameTextbox.TextChanged += fileNameTextbox_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 149);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(17, 93);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(194, 32);
+            label1.Size = new Size(120, 20);
             label1.TabIndex = 3;
             label1.Text = "Enter File Name..";
             // 
             // stopRecordingButton
             // 
-            stopRecordingButton.Location = new Point(254, 51);
-            stopRecordingButton.Margin = new Padding(6, 6, 6, 6);
+            stopRecordingButton.Location = new Point(156, 32);
+            stopRecordingButton.Margin = new Padding(4);
             stopRecordingButton.Name = "stopRecordingButton";
-            stopRecordingButton.Size = new Size(208, 70);
+            stopRecordingButton.Size = new Size(128, 44);
             stopRecordingButton.TabIndex = 4;
             stopRecordingButton.Text = "Stop Recording";
             stopRecordingButton.UseVisualStyleBackColor = true;
             stopRecordingButton.Click += stopRecordingButton_Click;
             // 
+            // recordingCountdownTimerLabel
+            // 
+            recordingCountdownTimerLabel.AutoSize = true;
+            recordingCountdownTimerLabel.Font = new Font("Corbel", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            recordingCountdownTimerLabel.Location = new Point(17, 157);
+            recordingCountdownTimerLabel.Name = "recordingCountdownTimerLabel";
+            recordingCountdownTimerLabel.Size = new Size(140, 28);
+            recordingCountdownTimerLabel.TabIndex = 5;
+            recordingCountdownTimerLabel.Text = "(countdown)";
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(492, 281);
+            Controls.Add(recordingCountdownTimerLabel);
             Controls.Add(stopRecordingButton);
             Controls.Add(label1);
             Controls.Add(fileNameTextbox);
             Controls.Add(beginRecordingButton);
             Controls.Add(endPlaybackButton);
             Controls.Add(startPlaybackButton);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -125,5 +138,6 @@
         private TextBox fileNameTextbox;
         private Label label1;
         private Button stopRecordingButton;
+        private Label recordingCountdownTimerLabel;
     }
 }

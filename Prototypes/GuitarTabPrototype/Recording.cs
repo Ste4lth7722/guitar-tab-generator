@@ -26,7 +26,7 @@ namespace GuitarTabPrototype
 				Debug.WriteLine(filePath);
 
 				audio_input = new WaveInEvent();
-				writer = new WaveFileWriter(filePath, audio_input.WaveFormat);
+				  writer = new WaveFileWriter(filePath, audio_input.WaveFormat);
 				// ensure no crash if 0 input devices.
 				audio_input.StartRecording();
 
