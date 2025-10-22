@@ -5,6 +5,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Security.Policy;
 using System.Diagnostics;
 using System.Windows.Forms.Design;
+using System.Runtime.CompilerServices;
 
 namespace GuitarTabPrototype
 {
@@ -13,7 +14,8 @@ namespace GuitarTabPrototype
 		private WaveOutEvent outputDevice;
 		private AudioFileReader audioFile;
 
-		private String fileName = "";
+		private String fileName = "test";
+		private String filePath = "";
 
 		Recording recordingManager;
 
@@ -21,7 +23,13 @@ namespace GuitarTabPrototype
 		public Form1()
 		{
 			InitializeComponent();
-		}
+
+            fileName = fileNameTextbox.Text;
+            filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName) + ".mp3";
+            pathPreviewLabel1.Text = filePath;
+			pathPreviewLabel2.Text = filePath;
+
+        }
 
 		private void startPlaybackButton_Click(object sender, EventArgs e)
 		{
@@ -32,8 +40,7 @@ namespace GuitarTabPrototype
 			}
 			if (audioFile == null)
 			{
-				var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName) + ".mp3";
-                audioFile = new AudioFileReader(path);
+				audioFile = new AudioFileReader(filePath);
 				outputDevice.Init(audioFile);
 			}
 			outputDevice.Play();
@@ -55,14 +62,11 @@ namespace GuitarTabPrototype
 
 		private void beginRecordingButton_Click(object sender, EventArgs e)
 		{
-			if (recordingManager == null)
+			if (recordingManager == null) // make a new recording object
 			{
 				recordingManager = new Recording();
 			}
-			//var outputFolder = @"C:\Users\samue\OneDrive - Hills Road Sixth Form College\Computer Science\NEA\Prototypes\GuitarTabPrototype\Files\Audio\" + fileNameTextbox.Text + ".mp3";
-			var outputFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName) + ".mp3";
 			startRecordingCountdown();
-			recordingManager.beginRecording(outputFolder); /// Recording starts before the countdown ends. TODO
         }
 
 
@@ -87,8 +91,12 @@ namespace GuitarTabPrototype
 				else
 				{
                     recordingCountdownTimerLabel.Text = ("Recording.."); /// This text also stays visible after  TODO
+
                     timer.Stop();
 					timer.Tick -= onTick;
+
+					var outputFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName) + ".mp3";
+                    recordingManager.beginRecording(outputFolder);
 				}
 			};
 
@@ -99,14 +107,26 @@ namespace GuitarTabPrototype
 		private void fileNameTextbox_TextChanged(object sender, EventArgs e)
 		{
 			fileName = fileNameTextbox.Text;
-		}
+			filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName) + ".mp3";
+			pathPreviewLabel1.Text = filePath;
+			pathPreviewLabel2.Text = filePath;
+        }
+
 
 		private void stopRecordingButton_Click(object sender, EventArgs e) /// TODO make it stop the countdown if that's currently ongoing.
 		{
-				if (recordingManager != null)
+			if (recordingManager != null)
 			{
+				recordingCountdownTimerLabel.Text = "Not Recording";
 				recordingManager.endRecording();
 			}
+		}
+
+		private int returnCenteredX(int width, int containerWidth)
+		{
+			int centeredX = 0;
+			centeredX = (width / 2) - containerWidth / 2;
+			return centeredX;
 		}
 	}
 }

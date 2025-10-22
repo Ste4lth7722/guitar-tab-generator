@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuitarTabPrototype")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b26407d2f9f2c2c19ef4447e635ed78fa381808")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+689e3a7eeb62e512b0583ad1f45ef327b97e9f74")]
 [assembly: System.Reflection.AssemblyProductAttribute("GuitarTabPrototype")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GuitarTabPrototype")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

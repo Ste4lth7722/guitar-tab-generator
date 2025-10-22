@@ -35,11 +35,17 @@
             label1 = new Label();
             stopRecordingButton = new Button();
             recordingCountdownTimerLabel = new Label();
+            fileControlPanel = new Panel();
+            pathPreviewLabel1 = new Label();
+            panel1 = new Panel();
+            pathPreviewLabel2 = new Label();
+            fileControlPanel.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // startPlaybackButton
             // 
-            startPlaybackButton.Location = new Point(340, 32);
+            startPlaybackButton.Location = new Point(12, 39);
             startPlaybackButton.Margin = new Padding(2, 1, 2, 1);
             startPlaybackButton.Name = "startPlaybackButton";
             startPlaybackButton.Size = new Size(119, 29);
@@ -50,7 +56,7 @@
             // 
             // endPlaybackButton
             // 
-            endPlaybackButton.Location = new Point(340, 82);
+            endPlaybackButton.Location = new Point(144, 39);
             endPlaybackButton.Margin = new Padding(2, 1, 2, 1);
             endPlaybackButton.Name = "endPlaybackButton";
             endPlaybackButton.Size = new Size(119, 29);
@@ -61,7 +67,7 @@
             // 
             // beginRecordingButton
             // 
-            beginRecordingButton.Location = new Point(17, 32);
+            beginRecordingButton.Location = new Point(12, 42);
             beginRecordingButton.Margin = new Padding(2, 1, 2, 1);
             beginRecordingButton.Name = "beginRecordingButton";
             beginRecordingButton.Size = new Size(134, 44);
@@ -72,7 +78,7 @@
             // 
             // fileNameTextbox
             // 
-            fileNameTextbox.Location = new Point(17, 114);
+            fileNameTextbox.Location = new Point(293, 36);
             fileNameTextbox.Margin = new Padding(2, 1, 2, 1);
             fileNameTextbox.Name = "fileNameTextbox";
             fileNameTextbox.Size = new Size(125, 27);
@@ -83,7 +89,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(17, 93);
+            label1.Location = new Point(298, 12);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(120, 20);
@@ -92,7 +98,7 @@
             // 
             // stopRecordingButton
             // 
-            stopRecordingButton.Location = new Point(156, 32);
+            stopRecordingButton.Location = new Point(161, 42);
             stopRecordingButton.Margin = new Padding(4);
             stopRecordingButton.Name = "stopRecordingButton";
             stopRecordingButton.Size = new Size(128, 44);
@@ -103,29 +109,74 @@
             // 
             // recordingCountdownTimerLabel
             // 
-            recordingCountdownTimerLabel.AutoSize = true;
+            recordingCountdownTimerLabel.Dock = DockStyle.Bottom;
             recordingCountdownTimerLabel.Font = new Font("Corbel", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            recordingCountdownTimerLabel.Location = new Point(17, 157);
+            recordingCountdownTimerLabel.Location = new Point(3, 97);
             recordingCountdownTimerLabel.Name = "recordingCountdownTimerLabel";
-            recordingCountdownTimerLabel.Size = new Size(140, 28);
+            recordingCountdownTimerLabel.Size = new Size(293, 28);
             recordingCountdownTimerLabel.TabIndex = 5;
-            recordingCountdownTimerLabel.Text = "(countdown)";
+            recordingCountdownTimerLabel.Text = "Not Recording";
+            recordingCountdownTimerLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // fileControlPanel
+            // 
+            fileControlPanel.BorderStyle = BorderStyle.FixedSingle;
+            fileControlPanel.Controls.Add(pathPreviewLabel1);
+            fileControlPanel.Controls.Add(beginRecordingButton);
+            fileControlPanel.Controls.Add(recordingCountdownTimerLabel);
+            fileControlPanel.Controls.Add(stopRecordingButton);
+            fileControlPanel.Location = new Point(33, 85);
+            fileControlPanel.Name = "fileControlPanel";
+            fileControlPanel.Padding = new Padding(3);
+            fileControlPanel.Size = new Size(301, 130);
+            fileControlPanel.TabIndex = 6;
+            // 
+            // pathPreviewLabel1
+            // 
+            pathPreviewLabel1.Dock = DockStyle.Top;
+            pathPreviewLabel1.Location = new Point(3, 3);
+            pathPreviewLabel1.Name = "pathPreviewLabel1";
+            pathPreviewLabel1.Size = new Size(293, 20);
+            pathPreviewLabel1.TabIndex = 6;
+            pathPreviewLabel1.Text = "path";
+            pathPreviewLabel1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(pathPreviewLabel2);
+            panel1.Controls.Add(startPlaybackButton);
+            panel1.Controls.Add(endPlaybackButton);
+            panel1.Location = new Point(374, 85);
+            panel1.Name = "panel1";
+            panel1.Padding = new Padding(3);
+            panel1.Size = new Size(275, 87);
+            panel1.TabIndex = 7;
+            // 
+            // pathPreviewLabel2
+            // 
+            pathPreviewLabel2.Dock = DockStyle.Top;
+            pathPreviewLabel2.Location = new Point(3, 3);
+            pathPreviewLabel2.Name = "pathPreviewLabel2";
+            pathPreviewLabel2.Size = new Size(267, 20);
+            pathPreviewLabel2.TabIndex = 1;
+            pathPreviewLabel2.Text = "path";
+            pathPreviewLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(492, 281);
-            Controls.Add(recordingCountdownTimerLabel);
-            Controls.Add(stopRecordingButton);
-            Controls.Add(label1);
+            ClientSize = new Size(682, 364);
+            Controls.Add(panel1);
+            Controls.Add(fileControlPanel);
             Controls.Add(fileNameTextbox);
-            Controls.Add(beginRecordingButton);
-            Controls.Add(endPlaybackButton);
-            Controls.Add(startPlaybackButton);
+            Controls.Add(label1);
             Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
             Text = "Form1";
+            fileControlPanel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +190,9 @@
         private Label label1;
         private Button stopRecordingButton;
         private Label recordingCountdownTimerLabel;
+        private Panel fileControlPanel;
+        private Label pathPreviewLabel1;
+        private Panel panel1;
+        private Label pathPreviewLabel2;
     }
 }

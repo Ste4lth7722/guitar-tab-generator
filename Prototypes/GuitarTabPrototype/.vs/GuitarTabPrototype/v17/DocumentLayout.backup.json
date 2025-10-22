@@ -11,8 +11,8 @@
       "RelativeMoniker": "D:0:0:{280686C1-248B-4A29-B889-324E03E6B00B}|GuitarTabPrototype.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{280686C1-248B-4A29-B889-324E03E6B00B}|GuitarTabPrototype.csproj|c:\\users\\boys\\onedrive - hills road sixth form college\\computer science\\nea\\prototypes\\guitartabprototype\\recording.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{280686C1-248B-4A29-B889-324E03E6B00B}|GuitarTabPrototype.csproj|solutionrelative:recording.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{280686C1-248B-4A29-B889-324E03E6B00B}|GuitarTabPrototype.csproj|c:\\users\\boys\\onedrive - hills road sixth form college\\computer science\\nea\\prototypes\\guitartabprototype\\logic\\recording.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{280686C1-248B-4A29-B889-324E03E6B00B}|GuitarTabPrototype.csproj|solutionrelative:logic\\recording.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 168,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Recording.cs",
+              "DocumentMoniker": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Logic\\Recording.cs",
+              "RelativeDocumentMoniker": "Logic\\Recording.cs",
+              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Logic\\Recording.cs",
+              "RelativeToolTip": "Logic\\Recording.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T17:40:39.476Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAcwGkAAACEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAwHcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T10:47:44.028Z",
               "EditorCaption": ""
@@ -43,24 +60,11 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T10:57:57.04Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Recording.cs",
-              "DocumentMoniker": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Recording.cs",
-              "RelativeDocumentMoniker": "Recording.cs",
-              "ToolTip": "C:\\Users\\Boys\\OneDrive - Hills Road Sixth Form College\\Computer Science\\NEA\\Prototypes\\GuitarTabPrototype\\Recording.cs",
-              "RelativeToolTip": "Recording.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T11:22:04.935Z",
-              "EditorCaption": ""
             }
           ]
         },
